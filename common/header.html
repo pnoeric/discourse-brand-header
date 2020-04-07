@@ -66,7 +66,7 @@
     },
 
     toggleHamburger() {
-      if (!this.state.hamburgerVisible /* && $(".header-cloak").css("display") === "block" */) {
+      if (!this.state.hamburgerVisible && $(".header-cloak").css("display") === "block" ) {
         Ember.run.later(() => {
           this.sendWidgetAction("toggleHamburger")
         }, 200);
@@ -117,7 +117,7 @@
   
     html(attrs, state) {
       const { siteSettings } = this;
-      const mobileView = this.site.mobileView;
+      const mobileView = false; /* this.site.mobileView; */
   
       const contents = [];
   
